@@ -5,7 +5,8 @@ buildscript {
         springBootVersion = '2.0.1.RELEASE'
     }
     repositories {
-        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public'}
+        //maven{ url 'http://maven.aliyun.com/nexus/content/groups/public'}
+        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/central/'}
     }
     dependencies {
         classpath ("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
