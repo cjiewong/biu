@@ -59,6 +59,8 @@ dependencies {
     compile 'org.apache.commons:commons-lang3'
     compile 'org.projectlombok:lombok'
     compile 'org.freemarker:freemarker'
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    compile group: 'com.google.guava', name: 'guava', version: '27.0-jre'
 
 }
 
