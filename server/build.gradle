@@ -58,6 +58,7 @@ dependencies {
     compile 'com.alibaba:fastjson:1.2.47'
     compile 'org.apache.commons:commons-lang3'
     compile 'org.projectlombok:lombok'
+    compile 'org.freemarker:freemarker'
 
 }
 
