@@ -5,7 +5,8 @@ buildscript {
         springBootVersion = '2.0.1.RELEASE'
     }
     repositories {
-        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public'}
+        //maven{ url 'http://maven.aliyun.com/nexus/content/groups/public'}
+        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/central/'}
     }
     dependencies {
         classpath ("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -56,6 +57,10 @@ dependencies {
     //其他库
     compile 'com.alibaba:fastjson:1.2.47'
     compile 'org.apache.commons:commons-lang3'
+    compile 'org.projectlombok:lombok'
+    compile 'org.freemarker:freemarker'
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    compile group: 'com.google.guava', name: 'guava', version: '27.0-jre'
 
 }
 
