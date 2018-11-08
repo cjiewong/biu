@@ -18,6 +18,32 @@ spring:
     url: jdbc:mysql://localhost:3306/${db}?characterEncoding=UTF-8&useSSL=false
     username: root
     password: twoxfour
+#    druid:
+#          biu:
+#            username:root
+#            password:twoxfour
+#            driver-class-name: com.mysql.jdbc.Driver
+#            url: jdbc:mysql://localhost:3306/biu?characterEncoding=UTF-8&useSSL=false
+#            initialSize: 5
+#            minIdle: 5
+#            maxActive: 20
+#          bianla:
+#           username:root
+#           password:twoxfour
+#           driver-class-name: com.mysql.jdbc.Driver
+#           url: jdbc:mysql://localhost:3306/bianla?characterEncoding=UTF-8&useSSL=false
+#           initialSize: 5
+#           minIdle: 5
+#           maxActive: 20
+#          community:
+#           username:root
+#           password:twoxfour
+#           driver-class-name: com.mysql.jdbc.Driver
+#           url: jdbc:mysql://localhost:3306/community?characterEncoding=UTF-8&useSSL=false
+#           initialSize: 5
+#           minIdle: 5
+#           maxActive: 20
+
 logging:
   path: ./logs
   level:

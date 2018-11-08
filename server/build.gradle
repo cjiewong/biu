@@ -60,7 +60,11 @@ dependencies {
     compile 'org.projectlombok:lombok'
     compile 'org.freemarker:freemarker'
     // https://mvnrepository.com/artifact/com.google.guava/guava
-    compile group: 'com.google.guava', name: 'guava', version: '27.0-jre'
+    compile 'com.google.guava:guava:27.0-jre'
+    //swagger 2
+    compile 'io.springfox:springfox-swagger2:2.7.0'
+    compile 'io.springfox:springfox-swagger-ui:2.7.0'
+
 
 }
 
