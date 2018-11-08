@@ -2,6 +2,9 @@ package com.abc;
 
 import com.abc.dao.TestUserMapper;
 import com.abc.entity.TestUser;
+import com.abc.test.entity.Tags;
+import com.abc.test.mapper.TagsMapper;
+import com.abc.test.service.ITagsService;
 import com.google.common.collect.Maps;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,6 +21,8 @@ import java.util.Map;
 public class SampleTest {
     @Autowired
     private TestUserMapper testUserMapper;
+    @Autowired
+    private TagsMapper tagsMapper;
 
     @Test
     public void test() {
@@ -44,5 +49,12 @@ public class SampleTest {
         Map<String, Object> map = Maps.newHashMap();
         map.put("name", "白痴4");
         testUserMapper.deleteByMap(map);
+    }
+
+    @Test
+    public void testMulti() {
+        System.out.println("test multi");
+        List<Tags> tags = tagsMapper.selectList(null);
+        tags.forEach(System.out::println);
     }
 }
