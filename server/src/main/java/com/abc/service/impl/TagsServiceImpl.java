@@ -1,12 +1,15 @@
-package com.abc.test.service.impl;
+package com.abc.service.impl;
 
 import com.abc.annotation.DataSource;
+import com.abc.dao.TagsMapper;
+import com.abc.entity.Tags;
 import com.abc.enums.DataSourceEnum;
-import com.abc.test.entity.Tags;
-import com.abc.test.mapper.TagsMapper;
-import com.abc.test.service.ITagsService;
+import com.abc.service.ITagsService;
+import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * <p>
@@ -19,5 +22,9 @@ import org.springframework.stereotype.Service;
 @Service
 @DataSource(DataSourceEnum.DB_BIANLA)
 public class TagsServiceImpl extends ServiceImpl<TagsMapper, Tags> implements ITagsService {
-
+    @Override
+//    @DataSource(DataSourceEnum.DB_BIANLA)
+    public List<Tags> selectList(Wrapper<Tags> wrapper) {
+        return super.selectList(wrapper);
+    }
 }

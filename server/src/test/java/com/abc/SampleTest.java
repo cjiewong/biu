@@ -1,10 +1,10 @@
 package com.abc;
 
+import com.abc.dao.TagsMapper;
 import com.abc.dao.TestUserMapper;
 import com.abc.entity.TestUser;
-import com.abc.test.entity.Tags;
-import com.abc.test.mapper.TagsMapper;
-import com.abc.test.service.ITagsService;
+import com.abc.entity.Tags;
+import com.abc.service.ITagsService;
 import com.google.common.collect.Maps;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,8 +22,7 @@ public class SampleTest {
     @Autowired
     private TestUserMapper testUserMapper;
     @Autowired
-    private TagsMapper tagsMapper;
-
+    private ITagsService tagsService;
     @Test
     public void test() {
         System.out.println("test insert");
@@ -54,7 +53,7 @@ public class SampleTest {
     @Test
     public void testMulti() {
         System.out.println("test multi");
-        List<Tags> tags = tagsMapper.selectList(null);
+        List<Tags> tags = tagsService.selectList(null);
         tags.forEach(System.out::println);
     }
 }

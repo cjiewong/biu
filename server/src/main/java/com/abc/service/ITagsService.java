@@ -1,6 +1,6 @@
-package com.abc.test.service;
+package com.abc.service;
 
-import com.abc.test.entity.Tags;
+import com.abc.entity.Tags;
 import com.baomidou.mybatisplus.service.IService;
 
 /**

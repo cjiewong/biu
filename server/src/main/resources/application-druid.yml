@@ -3,7 +3,7 @@ spring:
     druid:
           biu:
             username: root
-            password: twoxfour
+            password: root
             driver-class-name: com.mysql.jdbc.Driver
             url: jdbc:mysql://localhost:3306/biu?characterEncoding=UTF-8&useSSL=false
             initialSize: 5
@@ -20,7 +20,7 @@ spring:
             maxPoolPreparedStatementPerConnectionSize: 20
           bianla:
            username: root
-           password: twoxfour
+           password: root
            driver-class-name: com.mysql.jdbc.Driver
            url: jdbc:mysql://localhost:3306/bianla_qa?characterEncoding=UTF-8&useSSL=false
            initialSize: 5
@@ -37,7 +37,7 @@ spring:
            maxPoolPreparedStatementPerConnectionSize: 20
           community:
            username: root
-           password: twoxfour
+           password: root
            driver-class-name: com.mysql.jdbc.Driver
            url: jdbc:mysql://localhost:3306/bianla_community?characterEncoding=UTF-8&useSSL=false
            initialSize: 5
