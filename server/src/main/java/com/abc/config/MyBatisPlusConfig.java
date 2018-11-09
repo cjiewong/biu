@@ -42,7 +42,7 @@ public class MyBatisPlusConfig {
      * SQL执行效率插件
      */
     @Bean
-    @Profile({"dev","test","qa"})// 设置 dev test 环境开启
+    @Profile({"dev","test"})// 设置 dev test 环境开启
     public PerformanceInterceptor performanceInterceptor() {
         PerformanceInterceptor performanceInterceptor = new PerformanceInterceptor();
         performanceInterceptor.setMaxTime(1000);
