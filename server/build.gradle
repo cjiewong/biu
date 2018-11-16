@@ -66,6 +66,8 @@ dependencies {
     //swagger 2
     compile 'io.springfox:springfox-swagger2:2.7.0'
     compile 'io.springfox:springfox-swagger-ui:2.7.0'
+    //https://github.com/kevinsawicki/http-request
+    compile 'com.github.kevinsawicki:http-request:6.0'
 
 
 }
