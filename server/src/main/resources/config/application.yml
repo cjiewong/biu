@@ -5,10 +5,17 @@ server:
     session:
       cookie:
         name: BIUSID
+  tomcat:
+    uri-encoding: UTF-8
 spring:
   profiles:
     active: dev #dev,test,prod三种配置一键切换
     include: mybatisplus,shiro
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
 logging:
   path: ./logs
   level:
