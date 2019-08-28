@@ -8,17 +8,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * @author cjie
- * 主类继承SpringBootServletInitializer，重写configure方法  可用gradle将springboot项目打包成war包 gradle文件中添加apply plugin: 'war'
  */
 @SpringBootApplication
-public class ServerApplication extends SpringBootServletInitializer {
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(ServerApplication.class);
-    }
-
+public class ServerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ServerApplication.class,args);
+        SpringApplication.run(ServerApplication.class, args);
     }
 
 }

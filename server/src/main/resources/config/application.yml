@@ -1,5 +1,5 @@
 server:
-  port: 8889
+  port: 8888
   servlet:
     context-path: /api/v1
     session:
@@ -13,3 +13,4 @@ logging:
   path: ./logs
   level:
     com.abc.dao: debug
+
