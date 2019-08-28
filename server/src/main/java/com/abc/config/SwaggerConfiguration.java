@@ -28,6 +28,10 @@ public class SwaggerConfiguration {
                 .apiInfo(apiInfo());
     }
 
+    /**
+     * 创建该API的基本信息（这些基本信息会展现在文档页面中）
+     * 访问地址：http://项目实际地址/swagger-ui.html
+     */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("biu多数据源脚手架开发框架测试")
