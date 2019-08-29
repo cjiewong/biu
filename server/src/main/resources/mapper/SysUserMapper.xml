@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.abc.dao.SysUserMapper">
+<mapper namespace="com.makergo.dao.SysUserMapper">
 
-    <resultMap id="userMap" type="com.abc.entity.SysUser">
+    <resultMap id="userMap" type="com.makergo.entity.SysUser">
         <id property="uid" column="uid"/>
         <result property="uname"  column="uname" />
         <result property="nick"  column="nick" />
@@ -14,8 +14,8 @@
     </resultMap>
 
     <!-- 一对多：user、role -->
-    <resultMap id="userIncludeRolesMap" extends="userMap" type="com.abc.entity.SysUser">
-        <collection property="roleList" columnPrefix="role_" resultMap="com.abc.dao.SysRoleMapper.roleMap">
+    <resultMap id="userIncludeRolesMap" extends="userMap" type="com.makergo.entity.SysUser">
+        <collection property="roleList" columnPrefix="role_" resultMap="com.makergo.dao.SysRoleMapper.roleMap">
         </collection>
     </resultMap>
 

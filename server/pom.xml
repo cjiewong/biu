@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.abc</groupId>
+  <groupId>com.makergo</groupId>
   <artifactId>server</artifactId>
   <version>1.0</version>
 
-  <name>biu-server</name>
-  <description>the server for biu</description>
+  <name>makergo-server</name>
+  <description>the server for makergo-admin</description>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -132,7 +132,7 @@
         <artifactId>spring-boot-maven-plugin</artifactId>
         <!--这里写上main方法所在类的路径-->
         <configuration>
-          <mainClass>com.abc.ServerApplication</mainClass>
+          <mainClass>com.makergo.ServerApplication</mainClass>
         </configuration>
         <executions>
           <execution>
