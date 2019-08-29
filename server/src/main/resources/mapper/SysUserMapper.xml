@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.abc.dao.SysUserMapper">
 
-    <resultMap id="userMap" type="SysUser">
+    <resultMap id="userMap" type="com.abc.entity.SysUser">
         <id property="uid" column="uid"/>
         <result property="uname"  column="uname" />
         <result property="nick"  column="nick" />
@@ -14,7 +14,7 @@
     </resultMap>
 
     <!-- 一对多：user、role -->
-    <resultMap id="userIncludeRolesMap" extends="userMap" type="SysUser">
+    <resultMap id="userIncludeRolesMap" extends="userMap" type="com.abc.entity.SysUser">
         <collection property="roleList" columnPrefix="role_" resultMap="com.abc.dao.SysRoleMapper.roleMap">
         </collection>
     </resultMap>

@@ -49,35 +49,4 @@ public class MyBatisPlusConfig {
     public DataSource biu() {
         return DruidDataSourceBuilder.create().build();
     }
-
-
-
-
-    @Bean("sqlSessionFactory")
-    public SqlSessionFactory sqlSessionFactoryBean() throws Exception {
-        MybatisSqlSessionFactoryBean mybatisSqlSessionFactoryBean = new MybatisSqlSessionFactoryBean();
-        mybatisSqlSessionFactoryBean.setDataSource(biu());
-        MybatisConfiguration mybatisConfiguration = new MybatisConfiguration();
-        mybatisConfiguration.setJdbcTypeForNull(JdbcType.NULL);
-        mybatisConfiguration.setMapUnderscoreToCamelCase(true);
-        mybatisConfiguration.setCacheEnabled(false);
-        mybatisSqlSessionFactoryBean.setConfiguration(mybatisConfiguration);
-        mybatisSqlSessionFactoryBean.setPlugins(new Interceptor[]{
-                paginationInterceptor(),
-                performanceInterceptor()
-        });
-//        mybatisSqlSessionFactoryBean.setGlobalConfig(globalConfiguration());
-        return mybatisSqlSessionFactoryBean.getObject();
-    }
-      /*@Bean
-    public GlobalConfiguration globalConfiguration() {
-        GlobalConfiguration conf = new GlobalConfiguration(new LogicSqlInjector());
-        conf.setLogicDeleteValue("-1");
-        conf.setLogicNotDeleteValue("1");
-        conf.setIdType(0);
-        //conf.setMetaObjectHandler(new MyMetaObjectHandler());
-        conf.setDbColumnUnderline(true);
-        conf.setRefresh(true);
-        return conf;
-    }*/
 }
